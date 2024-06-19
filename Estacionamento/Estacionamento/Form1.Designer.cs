@@ -28,12 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            tlpPainelFundo = new TableLayoutPanel();
+            SuspendLayout();
+            // 
+            // tlpPainelFundo
+            // 
+            tlpPainelFundo.ColumnCount = 2;
+            tlpPainelFundo.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tlpPainelFundo.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80F));
+            tlpPainelFundo.Dock = DockStyle.Fill;
+            tlpPainelFundo.Location = new Point(0, 0);
+            tlpPainelFundo.Name = "tlpPainelFundo";
+            tlpPainelFundo.RowCount = 1;
+            tlpPainelFundo.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tlpPainelFundo.Size = new Size(900, 551);
+            tlpPainelFundo.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(900, 551);
+            Controls.Add(tlpPainelFundo);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private TableLayoutPanel tlpPainelFundo;
     }
 }
